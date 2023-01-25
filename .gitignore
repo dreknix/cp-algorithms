@@ -1,0 +1,17 @@
+*
+!.gitignore
+!README.md
+!Makefile-base.mk
+!LICENSE
+![a-z]*/
+!Makefile
+!*.c
+!*.cc
+!*.cpp
+!*.cxx
+!*.c++
+!*.h
+!*.java
+!*.py
+!*.kt
+!*.go
