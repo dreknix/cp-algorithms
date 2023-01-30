@@ -5,6 +5,11 @@
 !LICENSE
 ![a-z]*/
 !Makefile
+!.clang-format
+!.clang-tidy
+!CPPLINT.cfg
+!.editorconfig
+!bench.sh
 !*.c
 !*.cc
 !*.cpp
