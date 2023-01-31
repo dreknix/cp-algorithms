@@ -24,7 +24,7 @@ static inline int32_t right(int32_t i) { return (2 * i + 2); }
 // static inline int32_t right(int32_t i) { printf("  left(%d)->%d\n", i, 2*i+2); return (2*i + 2); }
 
 heap_t heap_init(int32_t capacity) {
-    heap_t heap = malloc(sizeof(heap_t) + capacity * sizeof(element_t));
+    heap_t heap = malloc(sizeof(struct heap) + capacity * sizeof(element_t));
     if (heap != NULL) {
         heap->capacity = capacity;
         heap->size     = 0;
