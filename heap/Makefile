@@ -1,15 +1,24 @@
 CC=clang
 CFLAGS=-O3 -Wall
 
+CXX=clang++
+CXXFLAGS=-O3 -Wall
+
 .PHONY: all lint lint-cpp lint-tidy lint-tidy-detail format zip
 
-all: k_lowest
+all: k_lowest k_lowest_cpp
 
 k_lowest: k_lowest.o minmax_heap.o
 	${CC} ${CFLAGS} -o $@ $^
 
 %.o: %.c
 	${CC} ${CFLAGS} -o $@ -c $<
+
+k_lowest_cpp: k_lowest_cpp.o
+	${CXX} ${CFLAGS} -o $@ $^
+
+%.o: %.cc
+	${CXX} ${CXXFLAGS} -o $@ -c $<
 
 clean:
 	@rm -rf *.o sort-quicksort
